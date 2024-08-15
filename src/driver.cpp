@@ -1,18 +1,20 @@
 #include "main.h"
 
-int turnSpeed = 0;
 void driver(){
-  int lSpeed;
-  int rSpeed;
+    // If joysticks are pushed far enough:
     if (abs(controller.get_analog(ANALOG_LEFT_Y)) > 7 || abs(controller.get_analog(ANALOG_RIGHT_X)) > 7){
+        // Variables set to the output value of the joysticks (-127 to 127)
         int lY = controller.get_analog(ANALOG_LEFT_Y);
         int rX = controller.get_analog(ANALOG_RIGHT_X);
-        lSpeed = lY + rX * 0.8;
-        rSpeed = lY /* 0.9*/ - rX * 0.8 ;
+        // Calculation of speed of both drivetrain sides
+        int lSpeed = lY + rX * 0.8;
+        int rSpeed = lY - rX * 0.8 ;
+        // Spin drivetrain motors accordingly
         lSide.move(lSpeed);
         rSide.move(rSpeed);
     }
     else{
+        // Brake drivetrain
         lSide.set_brake_mode(MOTOR_BRAKE_BRAKE);   
         rSide.set_brake_mode(MOTOR_BRAKE_BRAKE);
         lSide.brake();
@@ -21,15 +23,16 @@ void driver(){
 }
 
 void Intake(){
+  // R1 Intakes
   if (controller.get_digital(E_CONTROLLER_DIGITAL_R1)){
     intake.move(-127);
   }
+  // R2 only spins intake arm
   else if (controller.get_digital(E_CONTROLLER_DIGITAL_R2)){
     IntakeArm.move(-127);
   }
+  // Intakes stops if nothing is pressed
   else{
-    // intake.set_brake_mode(MOTOR_BRAKE_COAST);
-    // intake.brake();
     intake.move(0);
   }
 }

@@ -51,24 +51,30 @@
  */
 using namespace pros;
 
+// Controller
 extern Controller controller;
+
+// Drivetrain Declaration
 extern MotorGroup lSide;
 extern MotorGroup rSide;
-extern MotorGroup dt;
 
+// Intake Declaration
 extern MotorGroup intake;
 extern Motor IntakeArm;
 
+// Inertial Declaration
 extern IMU inertial;
 
+// Tracking Wheels Declaration
 extern Rotation vertical;
 extern Rotation horizontal;
 
+// Pneumatics Declaration
 extern ADIDigitalOut lift;
 extern ADIDigitalOut clamp;
 extern ADIDigitalOut intakeLift;
 
-
+// Driver Control Declaration
 void driver();
 void Intake();
 void pistonControl();
@@ -85,6 +91,8 @@ void initialize(void);
 void disabled(void);
 void competition_initialize(void);
 void opcontrol(void);
+
+// Autonomous Functions Declaration
 void turn(float desired, float timeout);
 void move(float pct, float dist, float timeout);
 #ifdef __cplusplus

@@ -12,7 +12,6 @@ Motor IntakeArm({1});
 
 IMU inertial(12);
 
- ADIAnalogIn encoder(4);
 Rotation vertical(21);
 Rotation horizontal(16);
 
