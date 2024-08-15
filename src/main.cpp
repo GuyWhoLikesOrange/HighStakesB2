@@ -31,18 +31,6 @@ void competition_initialize() {}
 void autonomous() {
 	vertical.reset_position();
 	turn(72,3000);
-	// move(100,24,2000);
-	// move(100,24,2000);
-	// move(100,-48,2000);
-	// turn(-45,1000);
-	// move(100,48,2000);
-	// turn(-90,1000);
-	// move(100,48,2000);
-	// move(100,-48,2000);
-	// turn(-45,1000);
-	// move(100,-48,2000);
-	// turn(0,1000);
-	// move(100,-24,1500);
 }
 
 void opcontrol() {
