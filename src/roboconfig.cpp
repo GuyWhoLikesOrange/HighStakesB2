@@ -14,6 +14,7 @@ IMU inertial(12);
 
  ADIAnalogIn encoder(4);
 Rotation vertical(21);
+Rotation horizontal(16);
 
 #define liftPort 'A'
 #define clampPort 'B'

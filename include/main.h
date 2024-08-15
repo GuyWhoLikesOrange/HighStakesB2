@@ -50,9 +50,7 @@
  * namespace.
  */
 using namespace pros;
-// using namespace pros::literals;
-// using namespace okapi;
-// pros::Motor motor (1, E_MOTOR_GEARSET_18, false, E_MOTOR_ENCODER_DEGREES);
+
 extern Controller controller;
 extern MotorGroup lSide;
 extern MotorGroup rSide;
@@ -60,16 +58,15 @@ extern MotorGroup dt;
 
 extern MotorGroup intake;
 extern Motor IntakeArm;
-// Motor lift({8});
 
 extern IMU inertial;
-// extern ADIAnalogIn encoder;
+
 extern Rotation vertical;
+extern Rotation horizontal;
 
 extern ADIDigitalOut lift;
 extern ADIDigitalOut clamp;
 extern ADIDigitalOut intakeLift;
-// adi::Pneumatics lift('A' , false);
 
 
 void driver();
