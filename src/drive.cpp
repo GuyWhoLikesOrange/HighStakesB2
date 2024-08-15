@@ -5,15 +5,6 @@ void driver(){
   int lSpeed;
   int rSpeed;
     if (abs(controller.get_analog(ANALOG_LEFT_Y)) > 7 || abs(controller.get_analog(ANALOG_RIGHT_X)) > 7){
-        // if (controller.get_analog(ANALOG_RIGHT_X) > 7){
-        //     turnSpeed = 80;
-        // }
-        // else if (controller.get_analog(ANALOG_RIGHT_X) > -7){
-        //     turnSpeed = -80;
-        // }
-        // else{
-        //     turnSpeed = 0;
-        // }
         int lY = controller.get_analog(ANALOG_LEFT_Y);
         int rX = controller.get_analog(ANALOG_RIGHT_X);
         lSpeed = lY + rX * 0.8;
@@ -43,25 +34,11 @@ void Intake(){
   }
 }
 
-// void lift(){
-//   if (controller.get_digital(DIGITAL_L1)){
-//     lift.move(127);
-//   }
-//   else if (controller.get_digital(DIGITAL_L2)){
-//     lift.move(-127);
-//   }
-//   else{
-//     lift.set_brake_mode(MOTOR_BRAKE_HOLD);
-//     lift.brake();
-//   }
-// }
-
 bool liftToggle = 0;
 bool clampToggle = 0;
 bool intakeToggle = 0;
 void pistonControl(){ 
 if (controller.get_digital(DIGITAL_L2)){ 
-  //detects when Button Right 1 is pressed
     liftToggle = !liftToggle; 
     if (liftToggle == 1){
     lift.set_value(true);
@@ -72,7 +49,6 @@ if (controller.get_digital(DIGITAL_L2)){
     delay(300);
 }
   if (controller.get_digital(DIGITAL_L1)){ 
-  //detects when Button Right 2 is pressed
     clampToggle = !clampToggle; 
     if (clampToggle == 1){
     clamp.set_value(true);
@@ -83,7 +59,6 @@ if (controller.get_digital(DIGITAL_L2)){
     delay(300);
   }
   if (controller.get_digital(DIGITAL_UP)){ 
-  //detects when Button Right 2 is pressed
     intakeToggle = !intakeToggle; 
     if (intakeToggle == 1){
     intakeLift.set_value(true);
