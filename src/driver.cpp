@@ -31,6 +31,9 @@ void Intake(){
   else if (controller.get_digital(E_CONTROLLER_DIGITAL_R2)){
     IntakeArm.move(-127);
   }
+  else if (controller.get_digital(E_CONTROLLER_DIGITAL_X)){
+    intake.move(127);
+  }
   // Intakes stops if nothing is pressed
   else{
     intake.move(0);
