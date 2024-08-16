@@ -105,6 +105,8 @@ void intakeUp();
 void intakeDown();
 void liftUp();
 void liftDown();
+
+void matchAuto1();
 #ifdef __cplusplus
 }
 #endif

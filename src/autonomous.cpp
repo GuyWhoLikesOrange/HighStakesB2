@@ -43,6 +43,5 @@ void liftDown(){
 void matchAuto1(){
     autoIntakeArm();
     move(127,20,1500);
-
 }
 

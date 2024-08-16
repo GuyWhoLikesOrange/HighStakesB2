@@ -29,8 +29,7 @@ void competition_initialize() {}
 
 
 void autonomous() {
-	vertical.reset_position();
-	turn(72,3000);
+	matchAuto1();
 }
 
 void opcontrol() {
