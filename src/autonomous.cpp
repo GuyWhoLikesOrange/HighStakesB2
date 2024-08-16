@@ -41,7 +41,14 @@ void liftDown(){
 }
 
 void matchAuto1(){
+    vertical.get_position();
     autoIntakeArm();
-    move(127,20,1500);
+    move(127,18,1500);
+    IntakeArm.move(0);
+    stopIntake();
+    turn(-90,1000);
+    move(127,-12,1500);
+    autoIntake();
+    clampDown();
 }
 

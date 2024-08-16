@@ -1,7 +1,7 @@
 {
   "py/object": "pros.conductor.project.Project",
   "py/state": {
-    "project_name": "pid1",
+    "project_name": "austynissigmas",
     "target": "v5",
     "templates": {
       "kernel": {

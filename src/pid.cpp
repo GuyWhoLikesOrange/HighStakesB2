@@ -4,9 +4,10 @@
 void turn(float desired, float timeout) { 
 
     // pid
-    double kP = 0.7915; //0.812
-    double kD = 0; //2.25
-    double kI = 0;
+    double kP = 0.8715; //0.812
+    double kD = 0; //0.125
+    double kI = 0; //0.025
+    double starti = 6;
     float error = 0;
     float preverror = 0;
     double derivative = 0;
@@ -20,8 +21,17 @@ void turn(float desired, float timeout) {
         error = desired - current;
         derivative = error - preverror;
         preverror = error;
-        // integral = error++;
+        if (fabs(error) < starti){
+            integral += error;
+        }
+        
+        if ((error > 0 && preverror < 0) || (error < 0 && preverror > 0)){
+            integral = 0;
+        }
 
+        if (error == 0){
+            integral = 0;
+        }
         speed = (kP * error + kD * derivative + kI * integral) * 1.27;
         lSide.move(speed); 
         rSide.move(-speed); 
