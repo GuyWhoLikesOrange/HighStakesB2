@@ -95,6 +95,16 @@ void opcontrol(void);
 // Autonomous Functions Declaration
 void turn(float desired, float timeout);
 void move(float pct, float dist, float timeout);
+void autoIntake();
+void autoIntakeArm();
+void autoOuttake();
+void stopIntake();
+void clampDown();
+void clampUp();
+void intakeUp();
+void intakeDown();
+void liftUp();
+void liftDown();
 #ifdef __cplusplus
 }
 #endif
