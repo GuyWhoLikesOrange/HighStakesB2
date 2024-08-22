@@ -18,7 +18,9 @@ Rotation horizontal(16);
 #define liftPort 'A'
 #define clampPort 'B'
 #define intakePort 'C'
+#define line_sensorPort 'D'
 
 ADIDigitalOut lift(liftPort);
 ADIDigitalOut clamp(clampPort);
 ADIDigitalOut intakeLift(intakePort);
+// ADIAnalogIn line_sensor(line_sensorPort);
