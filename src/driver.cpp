@@ -33,8 +33,11 @@ void Intake(){
   }
 
   //Line tracker
-  if (linetr)
+  if (adfjsdfhsdfjhsdjfh){
+    
+  }
   // Intakes stops if nothing is pressed
+
   
   else{
     intake.move(0);
@@ -69,7 +72,7 @@ void Intake(){
 
 bool liftToggle = 0;
 bool clampToggle = 0;
-bool intakeToggle = 0;
+bool doinkerToggle = 0;
 void pistonControl(){ 
 if (controller.get_digital(DIGITAL_L2)){ 
     liftToggle = !liftToggle; 
@@ -92,12 +95,12 @@ if (controller.get_digital(DIGITAL_L2)){
     delay(300);
   }
   if (controller.get_digital(DIGITAL_UP)){ 
-    intakeToggle = !intakeToggle; 
-    if (intakeToggle == 1){
-    intakeLift.set_value(true);
+    doinkerToggle = !doinkerToggle; 
+    if (doinkerToggle == 1){
+    doinker.set_value(true);
   }
-  else if(intakeToggle == 0){
-    intakeLift.set_value(false);
+  else if(doinkerToggle == 0){
+    doinker.set_value(false);
   }
     delay(300);
   }

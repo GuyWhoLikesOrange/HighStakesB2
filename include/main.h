@@ -72,7 +72,7 @@ extern Rotation horizontal;
 // Pneumatics Declaration
 extern ADIDigitalOut lift;
 extern ADIDigitalOut clamp;
-extern ADIDigitalOut intakeLift;
+extern ADIDigitalOut doinker;
 
 // Line tracker
 extern ADIAnalogIn lineTracker;
@@ -110,8 +110,9 @@ void intakeDown();
 void liftUp();
 void liftDown();
 
-//Match Auto declarations
 void matchAuto1();
+//Match Auto declarations
+
 
 #ifdef __cplusplus
 }
