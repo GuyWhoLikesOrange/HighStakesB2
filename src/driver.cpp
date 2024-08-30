@@ -33,7 +33,7 @@ void Intake(){
   }
 
   //Line tracker
-  if (adfjsdfhsdfjhsdjfh){
+  if (lineTracker.get_value()> 5){
     
   }
   // Intakes stops if nothing is pressed
