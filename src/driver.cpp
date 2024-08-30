@@ -27,18 +27,20 @@ void Intake(){
   if (controller.get_digital(E_CONTROLLER_DIGITAL_R1)){
     intake.move(-127);
   }
-  // R2 only spins intake arm
-  else if (controller.get_digital(E_CONTROLLER_DIGITAL_R2)){
-    IntakeArm.move(-127);
-  }
+  // Button X Outtakes
   else if (controller.get_digital(E_CONTROLLER_DIGITAL_X)){
     intake.move(127);
   }
+
+  //Line tracker
+  if (linetr)
   // Intakes stops if nothing is pressed
+  
   else{
     intake.move(0);
   }
 }
+
 
 // const int R_THRESHOLD = 2000; // RED THRESHOLD
 // const int B_THRESHOLD = 1000; // BLUE THRESHOLD (these values need to be changed cus idfk how the color thing works)
@@ -60,6 +62,8 @@ void Intake(){
 //         delay(100);
 //     }
 // }
+
+
 
 
 

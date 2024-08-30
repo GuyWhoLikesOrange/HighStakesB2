@@ -74,6 +74,10 @@ extern ADIDigitalOut lift;
 extern ADIDigitalOut clamp;
 extern ADIDigitalOut intakeLift;
 
+// Line tracker
+extern ADIAnalogIn lineTracker;
+
+
 // Driver Control Declaration
 void driver();
 void Intake();
@@ -106,7 +110,9 @@ void intakeDown();
 void liftUp();
 void liftDown();
 
+//Match Auto declarations
 void matchAuto1();
+
 #ifdef __cplusplus
 }
 #endif

@@ -23,4 +23,4 @@ Rotation horizontal(16);
 ADIDigitalOut lift(liftPort);
 ADIDigitalOut clamp(clampPort);
 ADIDigitalOut intakeLift(intakePort);
-// ADIAnalogIn line_sensor(line_sensorPort);
+ADIAnalogIn lineTracker(line_sensorPort);
