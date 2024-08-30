@@ -24,12 +24,12 @@ void clampUp(){
     clamp.set_value(false);
 }
 
-void intakeUp(){
-    intakeLift.set_value(true);
+void doinkerUp(){
+    doinker.set_value(true);
 }
 
-void intakeDown(){
-    intakeLift.set_value(false);
+void doinkerDown(){
+    doinker.set_value(false);
 }
 
 void liftUp(){

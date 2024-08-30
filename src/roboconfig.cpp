@@ -23,4 +23,7 @@ Rotation horizontal(16);
 ADIDigitalOut lift(liftPort);
 ADIDigitalOut clamp(clampPort);
 ADIDigitalOut doinker(doinkerPort);
+
 ADIAnalogIn lineTracker(line_sensorPort);
+Optical colorSensor(16);
+

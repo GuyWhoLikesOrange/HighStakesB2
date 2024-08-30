@@ -25,17 +25,19 @@ void driver(){
 void Intake(){
   // R1 Intakes
   if (controller.get_digital(E_CONTROLLER_DIGITAL_R1)){
+    if (lineTracker.get_value() >= 29){
     intake.move(-127);
+    }
   }
+  
   // Button X Outtakes
   else if (controller.get_digital(E_CONTROLLER_DIGITAL_X)){
+    if (lineTracker.get_value() >= 29){
     intake.move(127);
+    }
   }
 
   //Line tracker
-  if (lineTracker.get_value()> 5){
-    
-  }
   // Intakes stops if nothing is pressed
 
   

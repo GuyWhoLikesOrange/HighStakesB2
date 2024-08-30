@@ -36,7 +36,8 @@ void opcontrol() {
 	pros::lcd::initialize();
 	pros::lcd::set_text(1, "austyn");
 	while(true){
-		driver();
+		controller.print(0,0,"proximity: %d", colorSensor.get_proximity());
+		// driver();
 		Intake();
 		pistonControl();
 	}

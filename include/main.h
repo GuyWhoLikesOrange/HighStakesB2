@@ -105,8 +105,8 @@ void autoOuttake();
 void stopIntake();
 void clampDown();
 void clampUp();
-void intakeUp();
-void intakeDown();
+void doinkerUp();
+void doinkerDown();
 void liftUp();
 void liftDown();
 
