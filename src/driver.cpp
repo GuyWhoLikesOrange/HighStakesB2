@@ -45,29 +45,7 @@ void Intake(){
     intake.move(0);
   }
 }
-
-
-// const int R_THRESHOLD = 2000; // RED THRESHOLD
-// const int B_THRESHOLD = 1000; // BLUE THRESHOLD (these values need to be changed cus idfk how the color thing works)
-// const int DETECTION_DELAY = 500;
-
-// void colordetect() {
-//     intake.move_velocity(100);
-
-//     while (true) {
-//         int sensor_value = color_sensor.get_value();
-
-//         if (sensor_value > R_THRESHOLD) {
-//             intake.move_velocity(-100);
-//             delay(DETECTION_DELAY);
-//         } else if (sensor_value < B_THRESHOLD) {
-//             intake.move_velocity(100);
-//         }
-
-//         delay(100);
-//     }
-// }
-
+ 
 
 
 

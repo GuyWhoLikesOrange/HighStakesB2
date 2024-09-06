@@ -62,9 +62,6 @@ extern MotorGroup rSide;
 extern MotorGroup intake;
 extern Motor IntakeArm;
 
-// Inertial Declaration
-extern IMU inertial;
-
 // Tracking Wheels Declaration
 extern Rotation vertical;
 extern Rotation horizontal;
@@ -72,10 +69,12 @@ extern Rotation horizontal;
 // Pneumatics Declaration
 extern ADIDigitalOut lift;
 extern ADIDigitalOut clamp;
-extern ADIDigitalOut doinker;
+extern ADIDigitalOut doinker;   // Arm Mechanism
 
-// Line tracker
-extern ADIAnalogIn lineTracker;
+// Sensors
+extern IMU inertial;            // Inertial
+extern ADIAnalogIn lineTracker; // Line Tracker
+extern Color colorSensor;       // Color Sensor
 
 
 // Driver Control Declaration
@@ -110,8 +109,14 @@ void doinkerDown();
 void liftUp();
 void liftDown();
 
-void matchAuto1();
-//Match Auto declarations
+// Match Auto declarations
+void matchAutoLR;
+void matchAutoRR;
+void matchAutoLB;
+void matchAutoRB;
+
+// Skills
+void skills;
 
 
 #ifdef __cplusplus
@@ -122,7 +127,7 @@ void matchAuto1();
 /**
  * You can add C++-only headers here
  */
-//#include <iostream>
+
 #endif
 
 #endif
